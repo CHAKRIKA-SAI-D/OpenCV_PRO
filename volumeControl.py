@@ -3,7 +3,7 @@ import numpy as np
 import time
 import HandTrackingProject.HandTrackerModule as htm
 import math
-###############
+################
 wcam,hcam=640,480
 ptime=0
 vol=0
@@ -66,5 +66,5 @@ while True:
     ptime=ctime
     cv2.putText(img,f"%: {int(perc)}",(53,450),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,0),3)
     cv2.imshow("image",img)
-    if cv2.waitKey(1) & 0xFF==ord(" "):
+    if cv2.waitKey(1) & 0xFF==ord(" ") & 0xFF==ord("q"):
         break
